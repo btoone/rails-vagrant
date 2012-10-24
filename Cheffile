@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+
+# Setup
+# 
+# Specify a different install path for rails apps. Otherwise cookbooks are
+# installed at the app root directory
+# librarian-chef install --path vendor/chef/cookbooks
+ 
+# Opscode
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'git'
+cookbook 'networking_basic'
+
+# GitHub
+
+## fnichole
+cookbook 'ruby_build',
+  :git => 'https://github.com/fnichol/chef-ruby_build'
+
+cookbook 'rbenv',
+  :git => 'https://github.com/fnichol/chef-rbenv'
+
+
+## martinisoft 
+## UPDATE: This repo is no longer available. It simply did the following in the
+## recipe
+##
+## chef_gem "ruby-shadow" do
+##  action :install
+## end
+##
+## Either find a new cookbook that does the same or just install the ruby-shadow
+## gem on your system via install.sh
+
+# cookbook 'ruby-shadow',
+#   :git => 'https://github.com/martinisoft/chef-ruby_shadow'
+
+
+
+## opscode-cookbooks
+cookbook 'nginx',
+  :git => 'https://github.com/opscode-cookbooks/nginx'
+
+cookbook 'postgresql',
+  :git => 'https://github.com/opscode-cookbooks/postgresql'
+
+
+
+# caspyin
+cookbook 'mysql',
+  :git => 'https://github.com/caspyin/mysql',
+  :ref => 'innodb-and-utf8'
+  # :path => '/Users/Brandon/code/mysql'
+
+
+# Not verified to work yet
+
+# cookbook 'npm',
+#   :git => 'https://github.com/balbeko/chef-npm'
+cookbook 'nodejs',
+  :git => 'https://github.com/mdxp/nodejs-cookbook'
+
+# edlight's cookbooks seems to be the defacto one but it still appears to have some issues
+# I found that jamesonjlee had a fork with a few fixes in place. By the time I use this again
+# edelight's may be fixed. Until then the mongo steps in install.sh are known to work.
+# 
+# cookbook 'mongodb',
+#   :git => 'https://github.com/edelight/chef-mongodb'
+# cookbook 'mongodb',
+#   :git => 'https://github.com/jamesonjlee/chef-mongodb.git',
+#   :ref => 'fix_for_mongodb'
+

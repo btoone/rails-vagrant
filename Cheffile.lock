@@ -1,0 +1,81 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.4.8)
+    bluepill (1.1.0)
+    build-essential (1.1.2)
+    dmg (1.0.0)
+    git (1.0.2)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    networking_basic (0.0.5)
+    ohai (1.1.2)
+    openssl (1.0.0)
+    runit (0.15.0)
+    yum (1.0.0)
+
+GIT
+  remote: https://github.com/caspyin/mysql
+  ref: innodb-and-utf8
+  sha: dd63eb69193191967e847ec00a5d9b33c14dd985
+  specs:
+    mysql (1.2.7)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv
+  ref: master
+  sha: c4dbcc85e3d6dae0eb8c9dc507d5ee915b7ad480
+  specs:
+    rbenv (0.6.11)
+
+GIT
+  remote: https://github.com/fnichol/chef-ruby_build
+  ref: master
+  sha: c38d86966694b85db291625b245722208b40b61e
+  specs:
+    ruby_build (0.6.3)
+
+GIT
+  remote: https://github.com/mdxp/nodejs-cookbook
+  ref: master
+  sha: 51a2c2af4710f586abd17622e7e9a656c46bb12c
+  specs:
+    nodejs (1.0.1)
+      build-essential (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/nginx
+  ref: master
+  sha: 0ffe3297406a1ec4b45b2f3d17a363fe97a251ee
+  specs:
+    nginx (1.0.2)
+      bluepill (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ohai (>= 1.1.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/postgresql
+  ref: master
+  sha: 88deb221d0a119ff82e8a083fb3977cc5a5585bc
+  specs:
+    postgresql (1.0.1)
+      openssl (>= 0.0.0)
+
+DEPENDENCIES
+  apt (>= 0)
+  build-essential (>= 0)
+  git (>= 0)
+  mysql (>= 0)
+  networking_basic (>= 0)
+  nginx (>= 0)
+  nodejs (>= 0)
+  postgresql (>= 0)
+  rbenv (>= 0)
+  ruby_build (>= 0)
+

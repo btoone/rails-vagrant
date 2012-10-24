@@ -1,0 +1,5 @@
+.vagrant
+package.box
+/cookbooks
+/tmp
+/vendor

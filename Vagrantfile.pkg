@@ -1,0 +1,17 @@
+Vagrant::Config.run do |config|
+
+  # Set the host_name in the project Vagrantfile to be the name of the project
+  # config.vm.host_name = "rails-dev"
+
+  # Set the IP in the project Vagrantfile if needed. Then the network
+  # information is documented with the code
+  # config.vm.network :hostonly, "10.11.12.13"
+
+  config.vm.forward_port 3000, 3000   # rails (localhost:3000)
+  config.vm.forward_port 3306, 3333   # mysql
+  config.vm.forward_port 5432, 5555   # postgresql
+  config.vm.forward_port 27017, 27017  # mongodb
+  config.vm.forward_port 55672, 55672  # rabbitmq
+  
+  config.vm.share_folder "code", "/home/vagrant/code", ".", :create => true
+end
