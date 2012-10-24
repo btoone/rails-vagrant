@@ -27,3 +27,10 @@ The provisioning script will do the following:
     vagrant up                                      #=> provision the vm
     vagrant package --vagrantfile Vagrantfile.pkg   #=> package the vm
     vagrant box add box_name package.box            #=> add box to local boxes
+
+## Template
+
+Use `git archive` to export this template and create a new rails vm project
+
+    git archive -o latest.zip HEAD                  #=> creates an archive
+
