@@ -34,11 +34,11 @@ Vagrant::Config.run do |config|
   # guest vm. If you want to use an ssh connection instead youll need to use the
   # key ~/.vagrant.d/insecure_private_key
   #
-  config.vm.forward_port 3000,  3000   # rails
-  config.vm.forward_port 3306,  3333   # mysql
-  config.vm.forward_port 5432,  5555   # postgresql
-  config.vm.forward_port 27017, 27017  # mongodb
-  config.vm.forward_port 55672, 55672  # rabbitmq
+  config.vm.forward_port 3000, 3000   # rails (localhost:3000)
+  config.vm.forward_port 3306, 3307   # mysql
+  config.vm.forward_port 5432, 5433   # postgresql
+  config.vm.forward_port 27017, 27018  # mongodb
+  config.vm.forward_port 55672, 55673  # rabbitmq
 
   # Generally you want to use :nfs shares for better performance. You'll be
   # prompted for your password when bring up the VM.

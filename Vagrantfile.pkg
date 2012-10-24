@@ -8,10 +8,10 @@ Vagrant::Config.run do |config|
   # config.vm.network :hostonly, "10.11.12.13"
 
   config.vm.forward_port 3000, 3000   # rails (localhost:3000)
-  config.vm.forward_port 3306, 3333   # mysql
-  config.vm.forward_port 5432, 5555   # postgresql
-  config.vm.forward_port 27017, 27017  # mongodb
-  config.vm.forward_port 55672, 55672  # rabbitmq
+  config.vm.forward_port 3306, 3307   # mysql
+  config.vm.forward_port 5432, 5433   # postgresql
+  config.vm.forward_port 27017, 27018  # mongodb
+  config.vm.forward_port 55672, 55673  # rabbitmq
   
   config.vm.share_folder "code", "/home/vagrant/code", ".", :create => true
 end

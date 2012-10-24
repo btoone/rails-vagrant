@@ -14,6 +14,7 @@ cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'git'
 cookbook 'networking_basic'
+# cookbook 'rabbitmq'
 
 # GitHub
 
@@ -73,4 +74,7 @@ cookbook 'nodejs',
 # cookbook 'mongodb',
 #   :git => 'https://github.com/jamesonjlee/chef-mongodb.git',
 #   :ref => 'fix_for_mongodb'
-
+# cookbook 'mongodb',
+#   :git => 'https://github.com/sebwendel/chef-mongodb.git'
+# cookbook 'rabbitmq',
+#   :git => 'https://github.com/opscode-cookbooks/rabbitmq.git'
